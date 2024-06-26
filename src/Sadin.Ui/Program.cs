@@ -4,7 +4,7 @@ builder.Services.AddServerSideBlazor();
 
 var app = builder.Build();
 
-builder.WebHost.UseUrls("https://localhost:6001;http://localhost:6000");
+builder.WebHost.UseUrls("https://localhost:4001;http://localhost:4000");
 
 if (!app.Environment.IsDevelopment())
 {
