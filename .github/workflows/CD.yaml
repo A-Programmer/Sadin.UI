@@ -1,0 +1,42 @@
+name: CD
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 8.0.x
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Build
+      run: dotnet build --no-restore --configuration Release
+
+    - name: Publish
+      run: dotnet publish --no-build --configuration Release --output ./publish
+
+    - name: Setup SSH key
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan -H 85.198.13.75 >> ~/.ssh/known_hosts
+
+    - name: Test SSH connection
+      run: ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no root@85.198.13.75 "echo 'SSH connection successful'"
+
+    - name: Deploy to VPS
+      run: |
+        rsync -avz -e "ssh -i ~/.ssh/id_rsa" ./publish/ root@85.198.13.75:/var/www/sadin.dev
