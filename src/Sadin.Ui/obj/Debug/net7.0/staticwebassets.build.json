@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "pl9FygcfS/4ACNlcmT1R90sBdxjLQS3WXl+okvCXCEM=",
+  "Source": "Sadin.Ui",
+  "BasePath": "_content/Sadin.Ui",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Sadin.Ui/wwwroot",
+      "Source": "Sadin.Ui",
+      "ContentRoot": "/Users/sadin/Projects/Personal Projects/Sadin-Front/src/Sadin.Ui/wwwroot/",
+      "BasePath": "_content/Sadin.Ui",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/Users/sadin/Projects/Personal Projects/Sadin-Front/src/Sadin.Ui/wwwroot/css/site.css",
+      "SourceId": "Sadin.Ui",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/sadin/Projects/Personal Projects/Sadin-Front/src/Sadin.Ui/wwwroot/",
+      "BasePath": "_content/Sadin.Ui",
+      "RelativePath": "css/site.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/site.css"
+    }
+  ]
+}

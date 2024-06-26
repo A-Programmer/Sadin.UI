@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/sadin/Projects/Personal Projects/Sadin-Front/src/Sadin.Ui/wwwroot/css/site.css",
+      "PackagePath": "staticwebassets/css/site.css"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.Sadin.Ui.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.build.Sadin.Ui.props",
+      "PackagePath": "build\\Sadin.Ui.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.Sadin.Ui.props",
+      "PackagePath": "buildMultiTargeting\\Sadin.Ui.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.Sadin.Ui.props",
+      "PackagePath": "buildTransitive\\Sadin.Ui.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
